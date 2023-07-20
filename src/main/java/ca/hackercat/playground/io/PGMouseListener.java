@@ -1,5 +1,6 @@
 package ca.hackercat.playground.io;
 
+import ca.hackercat.logging.Logger;
 import ca.hackercat.playground.PlaygroundPanel;
 
 import java.awt.event.MouseEvent;
@@ -8,12 +9,13 @@ import java.awt.event.MouseMotionListener;
 import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
 
-import static ca.hackercat.playground.PlaygroundPanel.LOGGER;
-
 /**
  *
  */
 public class PGMouseListener implements MouseListener, MouseMotionListener, MouseWheelListener {
+
+    private static final Logger LOGGER = Logger.get(PGMouseListener.class);
+
     private PGMouseListener() {}
     private static PGMouseListener instance;
     public static PGMouseListener get() {
