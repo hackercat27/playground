@@ -7,8 +7,6 @@ public class CameraController extends Sprite {
     private double zoom = 1;
     private Sprite target;
     private PlaygroundPanel pgp;
-
-//    PGMouseListener ml = PGMouseListener.get();
     
     public CameraController(PlaygroundPanel pgp) {
         visible = false;
@@ -17,10 +15,6 @@ public class CameraController extends Sprite {
 
     @Override
     protected void update() {
-//        zoom = 1d / ((ml.getScrollAmount() / 16d) + 1);
-        
-//        zoom = Math.pow(0.9, Math.hypot(((Actor) target).vX, ((Actor) target).vY));
-        
         if (target != null) {
             
             double margin = 16;

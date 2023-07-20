@@ -1,13 +1,16 @@
 package ca.hackercat.playground.utils;
 
+import ca.hackercat.logging.Logger;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.awt.image.DataBufferByte;
 
 /**
  * A utility class with methods that can manipulate a given {@code BufferedImage}.
  */
 public final class PGImageUtils {
+
+    private static final Logger LOGGER = Logger.get(PGImageUtils.class);
     private PGImageUtils() {}
     
     public static BufferedImage multiply(BufferedImage texture1, BufferedImage texture2) {

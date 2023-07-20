@@ -1,17 +1,18 @@
 package ca.hackercat.playground.io;
 
+import ca.hackercat.logging.Logger;
 import com.github.strikerx3.jxinput.XInputAxes;
 import com.github.strikerx3.jxinput.XInputButtons;
 import com.github.strikerx3.jxinput.XInputComponents;
 import com.github.strikerx3.jxinput.XInputDevice;
 import com.github.strikerx3.jxinput.exceptions.XInputNotLoadedException;
 
-import static ca.hackercat.playground.PlaygroundPanel.LOGGER;
-
 /**
  * Implementation of a key listener that provides simple methods to get input from an XInput device.
  */
 public class PGXInputListener {
+
+    private static final Logger LOGGER = Logger.get(PGXInputListener.class);
     private PGXInputListener() throws XInputNotLoadedException {
         device = XInputDevice.getDeviceFor(0);
     }

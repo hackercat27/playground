@@ -1,6 +1,6 @@
 package ca.hackercat.playground;
 
-import ca.hackercat.playground.io.Logger;
+import ca.hackercat.logging.Logger;
 import ca.hackercat.playground.object.CameraController;
 import ca.hackercat.playground.object.Drawable;
 import ca.hackercat.playground.object.Manager;
@@ -25,10 +25,11 @@ import java.util.ConcurrentModificationException;
  * (or to be more specific, to a {@code JPanel}).
  */
 public class PlaygroundPanel extends JPanel {
+
+    private static final Logger LOGGER = Logger.get(PlaygroundPanel.class);
+
     protected ArrayList<Drawable> drawables = new ArrayList<>(0);
     protected ArrayList<Manager> managers = new ArrayList<>(0);
-
-    public static final Logger LOGGER = new Logger();
     
     private int internalWidth;
     private int internalHeight;

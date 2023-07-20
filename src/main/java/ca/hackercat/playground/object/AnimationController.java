@@ -1,17 +1,19 @@
 package ca.hackercat.playground.object;
 
+import ca.hackercat.logging.Logger;
+import ca.hackercat.playground.io.PGKeyListener;
 import ca.hackercat.playground.io.PlaygroundIO;
 
 import java.awt.image.BufferedImage;
 
-import static ca.hackercat.playground.PlaygroundPanel.LOGGER;
-
 public class AnimationController {
+
+    private static final Logger LOGGER = Logger.get(PGKeyListener.class);
     
     private Sprite parent;
     
     public AnimationController(Sprite parent, Animation... animations) {
-        if (animations.length == 0) LOGGER.fatal("No animations supplied to AnimationController!");
+        if (animations.length == 0) LOGGER.error("No animations supplied to AnimationController!");
         this.animations = animations;
         this.parent = parent;
     }

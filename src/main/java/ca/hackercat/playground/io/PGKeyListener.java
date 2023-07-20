@@ -1,16 +1,17 @@
 package ca.hackercat.playground.io;
 
+import ca.hackercat.logging.Logger;
 import ca.hackercat.playground.PlaygroundPanel;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-import static ca.hackercat.playground.PlaygroundPanel.LOGGER;
-
 /**
  * Implementation of a key listener that provides simple methods to check arbitrary keys on the keyboard.
  */
 public final class PGKeyListener implements KeyListener {
+
+    private static final Logger LOGGER = Logger.get(PGKeyListener.class);
     private PGKeyListener() {}
     private static PGKeyListener instance;
     public static PGKeyListener get() {

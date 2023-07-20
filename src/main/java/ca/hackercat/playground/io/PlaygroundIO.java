@@ -1,5 +1,6 @@
 package ca.hackercat.playground.io;
 
+import ca.hackercat.logging.Logger;
 import javax.imageio.ImageIO;
 
 import java.awt.*;
@@ -12,12 +13,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
 
-import static ca.hackercat.playground.PlaygroundPanel.LOGGER;
-
 /**
  * A utility class with IO related helper methods.
  */
 public final class PlaygroundIO {
+
+    private static final Logger LOGGER = Logger.get(PlaygroundIO.class);
     private PlaygroundIO() {}
 
     /**

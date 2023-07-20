@@ -1,8 +1,10 @@
 package ca.hackercat.playground.utils;
 
-import static ca.hackercat.playground.PlaygroundPanel.LOGGER;
+import ca.hackercat.logging.Logger;
 
 public class BezierSpline {
+
+    private static final Logger LOGGER = Logger.get(BezierSpline.class);
 
     Bezier[] beziers;
 

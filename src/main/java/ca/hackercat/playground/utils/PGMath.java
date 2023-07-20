@@ -1,11 +1,16 @@
 package ca.hackercat.playground.utils;
 
+import ca.hackercat.logging.Logger;
+
 import java.awt.*;
 
 /**
  * Utility class with useful math related functions that aren't offered in the native Java library.
  */
 public final class PGMath {
+
+    private static final Logger LOGGER = Logger.get(PGMath.class);
+
     private PGMath() {}
 
     /**

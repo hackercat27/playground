@@ -1,7 +1,8 @@
 package ca.hackercat.playground.object;
 
-import ca.hackercat.playground.JFrameManager;
+import ca.hackercat.logging.Logger;
 import ca.hackercat.playground.PlaygroundPanel;
+import ca.hackercat.playground.io.PGKeyListener;
 import ca.hackercat.playground.io.PGMouseListener;
 import ca.hackercat.playground.io.PlaygroundIO;
 
@@ -11,9 +12,9 @@ import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.lang.reflect.Field;
 
-import static ca.hackercat.playground.PlaygroundPanel.LOGGER;
-
 public class PGMenu extends Drawable {
+
+    private static final Logger LOGGER = Logger.get(PGMenu.class);
 
     private int selectedIndex;
 

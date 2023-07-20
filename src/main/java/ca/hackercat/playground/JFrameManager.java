@@ -1,5 +1,6 @@
 package ca.hackercat.playground;
 
+import ca.hackercat.logging.Logger;
 import ca.hackercat.playground.io.PGKeyListener;
 import ca.hackercat.playground.io.PGMouseListener;
 import javax.swing.*;
@@ -8,13 +9,13 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-import static ca.hackercat.playground.PlaygroundPanel.LOGGER;
-
 /**
  * A class with utility methods in an attempt to remove boilerplate code in regard to instantiating a
  * {@code JFrame} with a single {@code PlaygroundPanel} instance.
  */
 public class JFrameManager {
+
+    private static final Logger LOGGER = Logger.get(JFrameManager.class);
     
     private static GraphicsDevice[] devices = GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices();
     

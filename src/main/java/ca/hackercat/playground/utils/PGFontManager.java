@@ -1,5 +1,6 @@
 package ca.hackercat.playground.utils;
 
+import ca.hackercat.logging.Logger;
 import ca.hackercat.playground.io.PlaygroundIO;
 
 import java.awt.*;
@@ -7,9 +8,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-import static ca.hackercat.playground.PlaygroundPanel.LOGGER;
-
 public final class PGFontManager {
+
+    private static final Logger LOGGER = Logger.get(PGFontManager.class);
     private PGFontManager() {}
 
     private static class FontContainer {
